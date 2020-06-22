@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "react-dialog-container",
   "version": "1.0.0",
   "description": "一个可自定义的弹窗组件",
   "main": "./build/bundle.js",
@@ -43,6 +43,7 @@
   "keywords": [
     "react-dialog",
     "dialog",
+    "dialog-container",
     "react"
   ],
   "author": "wenmu",
@@ -52,9 +53,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github/issues"
+    "url": "https://github.com/codepandy/react-dialog.git/issues"
   },
-  "homepage": "https://github#readme",
+  "homepage": "https://github.com/codepandy/react-dialog#readme",
   "browserslist": [
     "defaults",
     "ie > 9",

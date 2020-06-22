@@ -13,7 +13,7 @@ module.exports = merge(baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/demo/index.html"),
-      title: "测试GroupTag",
+      title: "react-dialog-container",
     }),
   ],
   devServer: {

@@ -1,28 +1,27 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
 import styles from "./index.less";
 
-export default class YourComponent extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const { className, style, children } = this.props;
-
-    return (
-      <div className={`${styles.container} ${className}`} style={style}>
-        自定义组件
-        {children}
-      </div>
-    );
-  }
+export default function DialogContainer({ visible, children }) {
+  const [documentHeight, setDocumentHeight] = useState();
+  useEffect(() => {
+    setDocumentHeight(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight));
+    window.addEventListener("resize", () => {
+      setDocumentHeight(
+        Math.max(document.body.scrollHeight, document.documentElement.scrollHeight),
+      );
+    });
+    window.addEventListener("scroll", () => {
+      setDocumentHeight(
+        Math.max(document.body.scrollHeight, document.documentElement.scrollHeight),
+      );
+    });
+  }, []);
+  return (
+    <div
+      className={styles.dialogmarkContainer93sdf23}
+      style={{ visibility: visible ? "visible" : "hidden", height: `${documentHeight}px` }}
+    >
+      {children}
+    </div>
+  );
 }
-
-YourComponent.propTypes = {
-  className: PropTypes.any,
-  style: PropTypes.object,
-};
-
-YourComponent.defaultProps = {};
