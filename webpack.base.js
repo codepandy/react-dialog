@@ -33,6 +33,7 @@ const config = {
       },
     ],
   },
+  plugins: [new webpack.BannerPlugin("make by wenmu")],
 };
 
 module.exports = config;
